@@ -10,6 +10,7 @@ using pl = pair<ll, ll>;
 
 
 #define all(x) begin(x), end(x)
+#define rall(x) rbegin(x), rend(x)
 #define PB push_back
 #define MP make_pair
 #define F first
@@ -28,6 +29,12 @@ void print(U arr) {
 		cout << element << " ";
 	}
 	cout << endl;
+}
+
+// read and write into files, rather than standard i/o
+void setup(string s) {
+	freopen(s+".in", "r", stdin);
+	freopen(s+".out", "w", stdout);
 }
 
 

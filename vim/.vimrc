@@ -44,15 +44,21 @@ set mouse=a
 autocmd! bufwritepost .vimrc source %
 
 " any-fold
-autocmd Filetype * AnyFoldActivate
+" autocmd Filetype * AnyFoldActivate
 set foldlevel=99
 
 " dracula/vim
 syntax enable
 colorscheme dracula
 
-" change today 19/12/2020
-noremap ,cpp :-1read $HOME/.vim/.skeleton.cpp<CR>37ja<Tab>
+" change today 30/01/2021
+noremap ,cpp :-1read $HOME/.vim/.skeleton.cpp<CR>44ja<Tab>
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif"`'")"'")
 
 autocmd Filetype cpp,python nmap <Space>c <Esc>:w<CR>:only<CR>
 autocmd Filetype python nmap t <Esc>:w<CR>:!clear;/usr/bin/env python3 %<CR>
