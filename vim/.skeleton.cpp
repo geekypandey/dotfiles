@@ -33,8 +33,8 @@ void print(U arr) {
 
 // read and write into files, rather than standard i/o
 void setup(string s) {
-	freopen(s+".in", "r", stdin);
-	freopen(s+".out", "w", stdout);
+	freopen((s+".in").c_str(), "r", stdin);
+	freopen((s+".out").c_str(), "w", stdout);
 }
 
 
