@@ -40,6 +40,7 @@ void setup(string s) {
 	freopen((s+".out").c_str(), "w", stdout);
 }
 
+const int M = 1e9+7;
 
 int main(void) {
 	ios::sync_with_stdio(false);
