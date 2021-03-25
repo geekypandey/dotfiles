@@ -20,6 +20,8 @@ call plug#begin()
 	Plug 'bkad/CamelCaseMotion'
 	Plug 'tpope/vim-surround'
 	Plug 'pseewald/vim-anyfold'
+	Plug 'tpope/vim-dispatch'
+	Plug 'mattn/emmet-vim'
 "	Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer --go-completer --rust-completer --ts-completer' }
 
 
