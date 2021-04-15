@@ -56,7 +56,10 @@ colorscheme dracula
 " change today 30/01/2021
 noremap ,cpp :-1read $HOME/.vim/.skeleton.cpp<CR>48ja<Tab>
 
-" Return to last edit position when opening files (You want this!)
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+"Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
