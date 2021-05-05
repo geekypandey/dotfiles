@@ -22,6 +22,12 @@ call plug#begin()
 	Plug 'pseewald/vim-anyfold'
 	Plug 'tpope/vim-dispatch'
 	Plug 'mattn/emmet-vim'
+	Plug 'dkarter/bullets.vim' " for bulleting lists
+	Plug 'vim-scripts/indentpython.vim'
+	Plug 'dense-analysis/ale'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+	Plug 'junegunn/fzf.vim'
+
 "	Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer --go-completer --rust-completer --ts-completer' }
 
 
@@ -64,6 +70,9 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif"`'")"'")
+
+"Emmet vim default leader key
+let g:user_emmet_leader_key=','
 
 autocmd Filetype cpp,python nmap <Space>c <Esc>:w<CR>:only<CR>
 autocmd Filetype python nmap t <Esc>:w<CR>:!clear;/usr/bin/env python3 %<CR>
