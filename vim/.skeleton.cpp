@@ -24,6 +24,7 @@ using pl = pair<ll, ll>;
 #define readl(e) ll e; cin >> e
 #define reads(e) string e; cin >> e
 #define T int tt; cin >> tt; while(tt--)
+#define sz(container) (int) (container).size()
 
 
 template<typename U>
