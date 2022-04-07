@@ -24,3 +24,14 @@ function ,cdp() {
 	done
 	OLDPWD=$TEMP_PWD
 }
+
+# Validate things
+alias yamlcheck='python -c "import sys, yaml as y; y.safe_load(open(sys.argv[1]))"'
+
+# git aliases
+alias gst='git status'
+alias grhh='git reset --hard HEAD'
+alias glog='git log --oneline --decorate --graph'
+alias gd='git diff'
+alias gds='git diff --staged'
+
