@@ -53,7 +53,9 @@ call plug#begin()
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'Everduin94/nvim-quick-switcher'
+	Plug 'nicwest/vim-camelsnek'
 
+	Plug 'hrsh7th/nvim-cmp'
 
 
 call plug#end()
@@ -111,8 +113,8 @@ let g:user_emmet_leader_key=','
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 autocmd FileType markdown,md set shiftwidth=2
-autocmd FileType html,javascript,typescript set ts=2
-autocmd FileType html,javascript,typescript set shiftwidth=2
+autocmd FileType html,javascript,typescript,typescriptreact set ts=2
+autocmd FileType html,javascript,typescript,typescriptreact set shiftwidth=2
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <A-k> :wincmd k<CR>
@@ -142,6 +144,12 @@ nnoremap <silent> <leader>ou :lua require('nvim-quick-switcher').switch('compone
 nnoremap <silent> <leader>oi :lua require('nvim-quick-switcher').switch('component.css')<CR>
 nnoremap <silent> <leader>oo :lua require('nvim-quick-switcher').switch('component.html')<CR>
 nnoremap <silent> <leader>op :lua require('nvim-quick-switcher').switch('module.ts')<CR>
+nnoremap <silent> <leader>k :Kebab<CR>
 
 syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
 setlocal foldmethod=syntax
+
+" remap vertical split tab fzf vim
+let g:fzf_action = {
+      \ 'ctrl-b': 'vsplit'
+  \ }

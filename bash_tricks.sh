@@ -34,4 +34,3 @@ alias grhh='git reset --hard HEAD'
 alias glog='git log --oneline --decorate --graph'
 alias gd='git diff'
 alias gds='git diff --staged'
-
