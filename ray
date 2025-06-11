@@ -1,5 +1,10 @@
 DIR="venv"
 
+function install_requirements() {
+    if [[ -f "requirements.txt" ]]; then
+        pip install -r requirements.txt --quiet
+    fi
+}
 
 if [[ -v VIRTUAL_ENV ]]; then
 	deactivate
@@ -10,4 +15,6 @@ else
 		python3 -m venv venv
 		. venv/bin/activate
 	fi
+
+    install_requirements
 fi
