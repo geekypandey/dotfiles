@@ -44,4 +44,14 @@ return require('packer').startup(function(use)
 
   use { 'numToStr/Comment.nvim' }
 
+  use { 'mattn/emmet-vim' }
+
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
+  }
+
 end)
